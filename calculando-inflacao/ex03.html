@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+            td{
+                border: 1px solid black;
+                padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Calculando a inflação dos alimentos abaixo:</h2>
+        <table>
+            <tr>
+                <td>Alimento</td>
+                <td>Valor</td>
+                <td>Data</td>
+            </tr>
+            <tr>
+                <td>tomate</td>
+                <td>24/04</td>
+                <td>R$ 3,30</td>
+            </tr>
+            <tr>
+                <td>tomate</td>
+                <td>30/04</td>
+                <td>R$ 4,70</td>
+            </tr>
+            <tr>
+                <td>Arroz</td>
+                <td>24/04</td>
+                <td>R$ 2,99</td>
+            </tr>
+            <tr>
+                <td>arroz</td>
+                <td>30/04</td>
+                <td>R$ 3,25</td>
+            </tr>
+            <tr>
+                <td>cenoura</td>
+                <td>24/04</td>
+                <td>R$ 3,99</td>
+            </tr>
+            <tr>
+                <td>cenoura</td>
+                <td>30/04</td>
+                <td>R$ 4,14</td>
+            </tr>
+        </table>
+        <script>
+            //declarando as variaveis
+
+            const precoInicialTomate = 3.3;
+            const precoFinalTomate = 4.7;
+
+            const precoInicialArroz = 2.99;
+            const precoFinalArroz = 3.25;
+
+            const precoInicialCenoura = 3.99;
+            const precoFinalCenoura = 4.14;
+
+            //função para pular linha
+
+            function pulaLinha(){
+                document.write("<br><br>")
+            }
+
+            //calculando inflação individual
+
+            function obterValorInflacao(inicial,final){
+                let resultado = Math.round((final - inicial) / inicial * 100);
+                return resultado;
+            }
+
+            //função  média da inflação
+
+            function mediaInflacao(mediaTomate,mediaArroz, mediaCenoura){
+            
+                return  Math.round((mediaTomate + mediaArroz + mediaCenoura) / 3);
+            }
+
+            // função média da inflação diária
+
+            function inflacaoDiaria(mediaInflacaoDiaria){
+                return mediaInflacaoDiaria / 6;
+            }
+
+
+            //chamando as funcoes de inflacao individual
+            pulaLinha();
+            const valorDaInfacaoDoTomate = obterValorInflacao(precoInicialTomate,precoFinalTomate)
+            document.write("Valor da inflação total do tomate: " + valorDaInfacaoDoTomate + "%");
+
+            pulaLinha();
+
+            const valorInflacaoArroz = obterValorInflacao(precoInicialArroz, precoFinalArroz);
+            document.write("Valor da inflação total do arroz: " + valorInflacaoArroz + "%");
+
+            pulaLinha();
+
+            const valorInflacaoCenoura = obterValorInflacao(precoInicialCenoura, precoFinalCenoura);
+            document.write("Valor da inflação total do cenoura: " + valorInflacaoCenoura + "%")
+
+            pulaLinha();
+            
+            // chamando a média das inflações
+            document.write("Média da inflação geral desses alimentos: ")
+            document.write(mediaInflacao(valorDaInfacaoDoTomate, valorInflacaoCenoura, valorInflacaoArroz ) + "%");
+
+            pulaLinha();
+
+            // chamando a variacao de preco da inflacao entre os 6 dias
+            const inflacaoDiariaTomate = inflacaoDiaria(valorDaInfacaoDoTomate);
+            document.write("Inflação diária do tomate: " + inflacaoDiariaTomate + "%");
+
+            pulaLinha();
+
+            const inflacaoDiariaArroz = inflacaoDiaria(valorInflacaoArroz);
+            document.write("Inflação diária do arroz: " + inflacaoDiariaArroz + "%");
+
+            pulaLinha();
+
+            const inflacaoDiariaCenoura = inflacaoDiaria(valorInflacaoCenoura);
+            document.write("Inflação diária do cenoura: " + Math.round(inflacaoDiariaCenoura) + "%" );
+
+            pulaLinha();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>testando funções</title>
+    </head>
+    <body>
+
+        <!-- A vidente
+            Guarde seu nome numa variável
+            Guarde o número de filhos que você quer ter em outra variável
+            Guarde a cidade em que você gostaria de morar em outra variável
+            Guarde a sua profissão desejada em outra variável
+            Escreva na página (HTML) a seguinte frase: "A vidente prevê: {seu nome} terá {quantidade
+            de filhos} e viverá em {cidade} trabalhando como {profissão}"
+
+        Ilha deserta:
+
+            Guarde em 3 variáveis diferentes 3 itens que você levaria para uma ilha deserta para
+            sobreviver
+            Escreva na página (HTML) a seguinte frase: "Eu levaria para uma ilha deserta: {item 1},
+            {item 2}, {item 3}"
+
+        Declarando e atribuindo dentro da função:
+
+            Guarde o nome de um animal que você gostaria de ser em uma variável
+            Escreva na página (HTML) a seguinte frase: "Num primeiro momento, eu gostaria de ser
+            um(a): {animal escolhido}"
+            Trocar o valor do animal nesta mesma variável
+            Escreva na página (HTML) a seguinte frase na linha de baixo: "Pensando melhor, prefiro ser
+            um(a) {animal escolhido}"
+    -->
+        <script>
+            let nome = 'Michaelle Lima';
+            let quantFilhos = 1;
+            let cidade = 'Oslo';
+            let profissao = 'Engenheira de Software';
+
+            document.write("<h2>A vidente: </h2>")
+
+            document.write("A vidente prevê: "+ nome + " terá " + quantFilhos + " filho e viverá em " + 
+            cidade + " trabalhando como " + profissao + ".");
+
+            document.write("<h2>Ilha deserta: </h2>")
+
+            let item1 = 'água';
+            let item2 = "frutas";
+            let item3 = "livros"
+
+            document.write(" Eu levaria para uma ilha deserta: " + item1 + ", " +
+            item2 + " e " + item3 + ".");
+
+
+            document.write("<h2>Declarando e atribuindo dentro da função:</h2> ")
+
+
+            let animal = "gato"
+
+            document.write("Num primeiro momento, eu gostaria de ser um " + animal + ".");
+
+            animal = "passarinho";
+
+            document.write("<br> Pensando melhor, prefiro ser um: " + animal + ".");
+        </script>
+    </body>
+</html>
