@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisão de laranjas</title>
+</head>
+<body>
+    <script>
+
+        //funcao para frase e pular linha
+        function mostra(frase) {
+             document.write(frase);
+             document.write("<br><br>");
+        }
+
+        //variaveis da divisao laranja
+
+        const laranjas = parseInt(prompt("Quantas laranjas seu Joselito tem para dividir?"));
+        const vizinhos = parseInt(prompt("Quantos vizinhos irão participar dessa divisão?"));
+        const resultadoDivisao = dividirLaranjas(laranjas, vizinhos);
+        mostra("Cada vizinho receberá " + resultado + " laranjas");
+
+        //funcao para dividir as laranjas
+        function dividirLaranjas(quantLaranjas , quantVizinhos){
+            return Math.floor(quantLaranjas / quantVizinhos); 
+        }
+
+        //funcao para saber oq sobrou para joselito
+        function sobras(quantLaranjas, quantVizinhos) {
+            return Math.floor(quantLaranjas % quantVizinhos);
+        }
+
+        //variavel que imprime o resultado das sobras
+        const resultadoSobras = sobras(laranjas, vizinhos);
+        mostra("Joselito ficará com " + resultadoSobras + " laranjas")
+        
+    </script>
+</body>
+</html>

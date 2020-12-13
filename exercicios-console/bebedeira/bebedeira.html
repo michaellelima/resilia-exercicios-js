@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bebedeira</title>
+    </head>
+    <body>
+        <script>
+            //declarando as variaveis
+
+            let idade = parseInt(prompt("Digte sua idade"));
+            let idadePermitida = parseInt(prompt("A partir de qual idade é permitido tomar bebida alcoolicas em seu país?"))
+            
+            //funcao para saber se pode beber
+            
+            function permitidoBeber(idade, idadePermitida){
+                
+                if(idade >= idadePermitida){
+                    console.log("Você pode tomar bebidas alcoólicas");
+                } else {
+                    console.log("Você não pode tomar bebidas alcoólicas");
+                }
+            }
+
+            //chamando a funcao
+            permitidoBeber(idade,idadePermitida);    
+        </script>
+
+
+    </body>
+</html>

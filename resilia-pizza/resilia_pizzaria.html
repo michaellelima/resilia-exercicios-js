@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resilia Pizzaria</title>
+</head>
+<body>
+    <script>
+
+        //declarando as variaveis
+        const nomePizza = prompt("Qual o nome da pizza:");
+        const valorProducaoPizza = parseInt(prompt("Qual o valor da produção da pizza:"));
+        const valorPizza = parseInt(prompt("Por quanto a pizza é vendida:"));
+        
+        //funcao que calcula o imposto
+        function impostoAplicado(pizza){
+            return (8.9 / 100) * pizza;
+        }
+
+        //chamando a funcao imposto
+        const imposto = impostoAplicado(valorPizza);
+        
+        //funcao que calcula o valor liquido
+        function lucroLiquido(valorProducao,valorVendido){
+            return valorVendido - valorProducao;
+        }
+
+        //chamando a funcao valor liquido
+        const lucro = lucroLiquido(valorProducaoPizza,valorPizza);
+
+        //exibindo na tela
+        document.write("Para a pizza " + nomePizza + " o lucro liquido é de R$" 
+        + lucro + " e o imposto é de " + (imposto).toFixed(2) + "%");
+    </script>
+</body>
+</html>

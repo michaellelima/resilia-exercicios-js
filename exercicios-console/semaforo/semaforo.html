@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function corDoSemaforo(cor){
+
+            switch(cor){
+                case "verde":
+                    console.log("Pode continuar!!");
+                    break;
+                case "amarelo":
+                    console.log("Melhor Freiar!!");
+                    break;
+                case "vermelho":
+                    console.log("Pare já");
+                    break;
+                default:
+                    console.log("Essa não é uma opção válida!")
+                }
+
+
+        }
+
+        let semaforo = prompt("Me diga se qual a cor do semaforo: Verde, amarelo ou vermelho?");
+
+
+        corDoSemaforo(semaforo);
+    </script>
+</body>
+</html>
